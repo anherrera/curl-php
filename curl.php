@@ -3,7 +3,7 @@
 class Curl {
 
 	protected $url;
-	protected $request_headers;
+	protected $request_headers = array();
 	protected $request_body;
 	protected $response_headers;
 	protected $response_body;
