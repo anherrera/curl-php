@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Class Curl
+ *
+ * A simple wrapper for cURL
+ */
 class Curl {
 
 	protected $url;
