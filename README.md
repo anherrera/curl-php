@@ -7,7 +7,7 @@ PHP class that makes cURL super easy. Supports request and response headers.
 require 'curl.php'
 
 $curl = new Curl();
-$curl->url = 'http://www.google.com';
+$curl->setUrl('http://www.foo.bar');
 
 $headers = array(
     'User-Agent: php-curl by ansjolander',
