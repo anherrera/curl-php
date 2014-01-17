@@ -14,16 +14,19 @@ $headers = array(
     'Pragma: no-cache'
 );
 
-$curl->request_headers = $headers;
+$curl->setRequestHeaders($headers);
 
-$curl->send_request();
+$curl->sendRequest();
 
-$response = $curl->response();
+$response = $curl->getFullResponse();
 
 // get the response headers/body
-$response_headers = $response['headers'];
-$response_body = $response['body'];
+$responseHeaders = $response['headers'];
+$responseBody = $response['body'];
 
-// or if you just need the body...
+// get the body json_decoded
+$jsonDecodedBody = $curl->getResponseBody('json');
+
+// or if you just need the body raw...
 echo $curl;
 ```
